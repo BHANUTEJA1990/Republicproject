@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" title="happy republic" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY REPUBLICDAY</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="app.js" href="js/app.js">
+</head>
+<body>
+   
+    <div class="main" ><div class="overlay">
+        <div class="title">74th Republic Day on January 26, 2023</div>
+        <div class="title" id="enddate ">HAPPY REPUBLIC DAY<br>
+        <div class="title" id="demo" > <p>
+            <p id="demo"></p>
+        </p></div>
+        
+<audio src="Maa-Tujhe-Salaam-A.R.-Rahman.mp3" controls autoplay  loop></audio>
+<style>
+    *{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+.main{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-image: url(https://yometro.com/images/places/India-Gate.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.col{
+    width: 1000px;
+    height: 100px;
+    border: 1px red ;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+
+}
+.col div{
+    width: 250px;
+    text-align: center;
+    align-items: center;
+
+}
+input{
+    height: 50px;
+    width: 60%;
+    background-color: rgba(255, 255,255,0.9); 
+    border-color: transparent;
+    border-radius:10px ;
+    align-items: center;
+    display: block;
+    }
+</style>
+<script >
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 27, 2023 09:33:00" ).getTime();
+    
+    // Update  <the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = days + "days " + hours + "hours "
+      + minutes + "minutes " + seconds + "seconds ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML ="www.google.com";
+      
+      }
+    }, 100);    
+</script>
+
+
+</body>
+</html>
